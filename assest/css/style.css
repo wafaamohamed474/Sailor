@@ -1,0 +1,923 @@
+/* start global variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --main-color: #556270;
+  --main-color-btn: #d9232d;
+  --main-font: "Raleway", sans-serif;
+  --rate-color: #6b7b8d;
+}
+.p-70 {
+  padding: 70px 0;
+}
+.main-btn {
+  background-color: var(--main-color-btn) !important;
+  border: none;
+  padding: 10px 25px !important;
+  color: white !important;
+  font-weight: 600;
+  transition: 0.3s !important;
+  width: fit-content;
+  border-radius: 4px !important;
+}
+.main-btn:hover {
+  background-color: #f62a34 !important;
+  color: white !important;
+}
+.up a {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+  background-color: var(--main-color-btn);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: fixed;
+}
+.up i {
+  color: white;
+}
+/* end global variables */
+/* ..........................start header ........................... */
+.header {
+  padding: 5px 50px;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 5px 15px #7777772d;
+  z-index: 1000;
+}
+.header .navbar-brand {
+  color: var(--main-color);
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+.navbar-toggler {
+  box-shadow: none !important;
+  border: none !important;
+  left: 0;
+}
+.collapse {
+  display: flex;
+  justify-content: end;
+}
+ul li {
+  padding: 0 10px;
+  color: var(--main-color) !important;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
+}
+ul li a:hover {
+  color: var(--main-color-btn) !important;
+}
+ul li .active {
+  color: var(--main-color-btn) !important;
+}
+@media (max-width: 992px) {
+  .header .navbar-brand {
+    margin-left: 0;
+  }
+  .collapse {
+    justify-content: start;
+  }
+}
+/* ..........................end header ........................... */
+/* ..........................start landing ........................... */
+.landing {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(/assest/img/slide-1.jpg);
+  background-size: cover;
+  background-position: top center;
+  z-index: 100;
+}
+.landing::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(30, 35, 40, 0.6);
+  z-index: -1;
+}
+.landing .left,
+.right {
+  position: absolute;
+  top: 45%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.146);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.landing .left {
+  left: 2px;
+}
+.landing .right {
+  right: 2px;
+}
+.landing i {
+  font-size: 24px;
+  color: rgba(205, 205, 205, 0.482);
+}
+.landing .b-1,
+.b-2,
+.b-3 {
+  position: absolute;
+  bottom: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.482);
+}
+.landing .b-1 {
+  left: calc(50% - 17px);
+  background-color: var(--main-color-btn);
+}
+.landing .b-2 {
+  left: calc(50%);
+}
+.landing .b-3 {
+  left: calc(50% + 17px);
+}
+.landing .container {
+  position: relative;
+}
+.landing .row {
+  position: absolute;
+  top: 38vh;
+  text-align: center;
+}
+.landing .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  flex-direction: column;
+  z-index: 1;
+}
+.landing .text h1 {
+  color: white;
+  font-size: 48px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+.landing .text p {
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .landing .text h1 {
+    font-size: 38px;
+  }
+  .landing .text p {
+    width: 65%;
+  }
+}
+/* ..........................end landing ........................... */
+/* ..........................start brands........................... */
+.brand h1,
+p {
+  color: #444444;
+}
+.brand .left-side h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.brand .left-side p {
+  font-size: 26px;
+  line-height: 1.5;
+}
+.brand .right-side .first-p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+.brand .right-side .check-box {
+  margin-top: 30px;
+}
+.brand .right-side .check {
+  display: flex;
+  align-items: start;
+}
+.brand .right-side .check i {
+  color: var(--main-color-btn);
+  margin-right: 10px;
+}
+/* ..........................end brands........................... */
+/* ............................start clients...........................*/
+.client {
+  background-color: #f8f9fa;
+}
+.client .client-img {
+  text-align: center;
+}
+.client .client-img img {
+  width: 45%;
+  padding: 30px 0;
+  transition: 0.3s;
+  filter: grayscale(100%);
+}
+.client .client-img:hover img {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+/* ..........................end clients........................... */
+/* ..........................start cards........................... */
+.cards .card-content {
+  padding: 30px 10px 30px 30px !important;
+  background-color: #f8f9fa;
+  border: none;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  border-radius: 7px;
+  margin-bottom: 30px;
+}
+.cards .card-content i {
+  font-size: 36px;
+  color: var(--main-color-btn);
+  margin-right: 30px;
+}
+.cards .card-content h5 a {
+  color: #556270;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.cards .card-content h5 a:hover {
+  color: var(--main-color-btn);
+}
+.cards .card-content p {
+  line-height: 24px;
+  font-size: 14px;
+  color: #444444;
+  margin-top: 10px;
+}
+/* ..........................end cards........................... */
+/* ..........................start portfolio........................... */
+.portfolio .links button {
+  transition: 0.3s;
+  padding: 5px 15px !important;
+  font-weight: 600;
+}
+.portfolio .links button:hover {
+  background-color: var(--main-color-btn);
+  color: white !important;
+}
+.portfolio .image {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  transition: 0.5s !important;
+  overflow: hidden;
+}
+.portfolio .image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(85, 98, 112, 0.6) !important;
+  transition: all 0.5s !important;
+}
+.portfolio .image:hover::after {
+  z-index: 2;
+}
+.portfolio .image .div {
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column;
+  padding: 0 0 30px 20px;
+  transition: all 0.3s !important;
+}
+.portfolio .image img {
+  transition: all 0.5s !important;
+}
+.portfolio .image .div h4 {
+  color: white;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif !important;
+  font-size: 22px;
+}
+.portfolio .image .div span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+.portfolio .image .div .icons i {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 18px;
+  margin-top: 10px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.portfolio .image .div .icons i:hover {
+  color: white !important;
+}
+.portfolio .image:hover img {
+  transform: scale(1.1);
+}
+.portfolio .image:hover .div {
+  z-index: 3;
+}
+.portfolio .displayOnLarg .img4 {
+  position: relative;
+  top: -120px;
+}
+.portfolio .displayOnLarg .img5 {
+  position: relative;
+  top: -120px;
+}
+.displayOnMini {
+  display: none !important;
+}
+
+@media (max-width: 992px) {
+  .displayOnLarg {
+    display: none !important;
+  }
+  .displayOnMini {
+    display: flex !important;
+  }
+  .displayOnMini .img4 {
+    position: relative;
+    top: -120px;
+  }
+  .displayOnMini .img6,
+  .img8,
+  .img9 {
+    position: relative;
+    top: -155px;
+  }
+}
+@media (max-width: 767px) {
+  .displayOnMini .img9 {
+    margin-left: 0;
+  }
+  .displayOnMini .img4 , .img6 , .img8 , .img9{
+    top: 0 !important;
+  }
+  .displayOnLarg {
+    display: none;
+  }
+  .displayOnMini {
+    display: flex;
+  }
+}
+
+/* ..........................end portfolio........................... */
+/* ..........................start footer........................... */
+.footer {
+  background-color: #515d6a;
+  color: white;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer h2 {
+  font-family: var(--main-font);
+  font-size: 26px;
+  font-weight: 600;
+}
+.footer .p-div {
+  padding: 20px 0;
+}
+.footer .p-div p {
+  margin: 0;
+  color: white;
+  font-size: 14px !important;
+}
+.footer .span-div p {
+  margin: 0;
+  color: white;
+  font-size: 14px !important;
+}
+.footer .span-div span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.footer .icons {
+  display: flex;
+  padding: 20px 0;
+}
+.footer .icons i {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+  border-radius: 4px;
+  padding: 15px 0;
+  font-size: 14px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer .icons i:hover {
+  background-color: var(--main-color-btn);
+}
+.footer h6 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-family: var(--main-font);
+}
+.footer ul {
+  padding-left: 0;
+}
+.footer ul li {
+  font-size: 14px;
+  padding: 10px 0;
+}
+.footer ul li i {
+  color: #ffffffaa;
+  margin-right: 10px;
+  font-size: 10px;
+}
+.footer ul li a {
+  color: #ffffffaa;
+  transition: 0.3s;
+}
+.footer ul li a:hover {
+  color: white !important;
+}
+.footer .Newsletter {
+  color: white;
+  font-size: 14px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+/* ..........................end footer........................... */
+/* ..........................start copyright........................... */
+.copyright {
+  text-align: center;
+  background-color: rgb(74, 85, 98);
+  padding: 30px 0;
+}
+.copyright p {
+  color: white;
+  margin: 0;
+  font-size: 15px;
+}
+.copyright p span {
+  font-weight: 700;
+  font-size: 15px;
+}
+.copyright .design {
+  color: #ffffffaa;
+  padding-top: 10px;
+}
+.copyright .design a {
+  color: #ffffffaa;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.copyright .design a:hover {
+  color: white;
+}
+/* ..........................end copyright........................... */
+/* ..........................start secondary section........................... */
+.secondary-sec {
+  padding: 104px 0px 20px 20px;
+  background-color: #f8f9fa;
+}
+.details-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details-link h2 {
+  font-size: 28px;
+  color: #444444;
+}
+.details-link p {
+  color: #444444 !important;
+  margin: 0;
+}
+.details-link a {
+  color: var(--main-color-btn);
+}
+.box-sh {
+  box-shadow: none;
+}
+/* ..........................end secondary section........................... */
+/* ..........................start contact........................... */
+.contact {
+  padding: 50px 0;
+}
+.contact .message .message-content p {
+  text-align: center;
+  font-size: 14px;
+  color: #3c4043;
+}
+.contact .contact-header h1 {
+  margin: 20px 0;
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+}
+.contact form textarea,
+input {
+  border: 1px solid #e5e6e9;
+  border-radius: 5px;
+}
+.contact form textarea,
+input:focus {
+  outline: none;
+}
+.contact-line {
+  margin-bottom: 40px;
+}
+.contact-line i {
+  font-size: 19px;
+  margin-right: 20px;
+  background-color: #edeff1 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  padding: 23px !important;
+  transition: all 0.3s;
+}
+.contact-line i:hover {
+  color: white;
+  background-color: var(--main-color) !important;
+}
+.contact-line h5 {
+  margin-bottom: 0;
+  font-size: 20px;
+  color: var(--main-color);
+  font-weight: 600;
+}
+.contact-line p {
+  color: #8795a4;
+  margin: 0;
+  font-size: 14px;
+}
+/* ..........................end contact........................... */
+/* ..........................start about........................... */
+.team {
+  background-color: #f8f9fa;
+}
+.main-title span {
+  font-size: 14px;
+  color: #aaaaaaaa;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+.main-title span::after {
+  position: absolute;
+  content: "";
+  width: 130px;
+  height: 0.2px;
+  background-color: var(--main-color-btn);
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+}
+.main-title h1 {
+  color: var(--main-color);
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-size: 36px;
+}
+.team .image {
+  overflow: hidden;
+  border-radius: 7px;
+}
+.team img {
+  transition: all 0.3s;
+}
+.team .card:hover img {
+  transform: scale(1.1);
+}
+.team .row {
+  display: flex !important;
+  align-items: flex-start;
+  flex-direction: row !important;
+}
+.team .card {
+  padding: 30px 0px 30px 30px;
+  border: none;
+  box-shadow: 0 5px 10px #eee;
+}
+
+.team .card-body {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.team .card-title {
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 22px;
+}
+.team p {
+  margin-bottom: 0 !important;
+  font-family: "Open Sans", sans-serif;
+  color: #444444 !important;
+}
+.team .card-text {
+  font-size: 14px;
+  margin-bottom: 10px !important;
+}
+.team hr {
+  width: 20%;
+  margin: 10px 0;
+  height: 1.5px;
+  background-color: #8795a4;
+  border: none;
+}
+.team .icons {
+  display: flex;
+}
+.team .icons i {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 15px 0;
+  font-size: 14px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #8795a4 !important;
+  color: white;
+}
+.team .icons i:hover {
+  background-color: var(--main-color-btn) !important;
+}
+@media (max-width:768px) {
+  .team .card{
+    padding: 30px 0px;
+  }
+  .team .image{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team img {
+     width: 80%;
+  }
+  .team .card-body{
+    padding:30px  40px 0;
+  }
+}
+/* ..........................end about........................... */
+/* ..........................start skills........................... */
+.skills .rate {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: var(--rate-color);
+  font-weight: 700;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+.skills .rate::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 12px;
+  bottom: -20px;
+}
+.r1::after {
+  background-image: linear-gradient(
+    to right,
+    var(--rate-color) 60%,
+    var(--rate-color)
+  );
+}
+.r2::after {
+  background-image: linear-gradient(
+    to right,
+    var(--rate-color) 80%,
+    #edeff1 20%
+  );
+}
+.r3::after {
+  background-image: linear-gradient(
+    to right,
+    var(--rate-color) 90%,
+    #edeff1 10%
+  );
+}
+.r4::after {
+  background-image: linear-gradient(
+    to right,
+    var(--rate-color) 90%,
+    #edeff1 10%
+  );
+}
+.r5::after {
+  background-image: linear-gradient(
+    to right,
+    var(--rate-color) 75%,
+    #edeff1 25%
+  );
+}
+.r6::after {
+  background-image: linear-gradient(
+    to right,
+    var(--rate-color) 55%,
+    #edeff1 45%
+  );
+}
+/* ..........................end skills........................... */
+/* ..........................start features........................... */
+.features a {
+  color: var(--main-color) !important;
+}
+.features ul .active a {
+  color: var(--main-color-btn) !important;
+}
+.features li {
+  padding: 0;
+  position: relative;
+  margin-bottom: 20px !important;
+}
+.features li::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 40px;
+  background-color: var(--main-color-btn);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  display: none;
+  transition: 0.5s;
+}
+.features li:hover::after {
+  display: block;
+}
+.features .links ul {
+  padding: 0;
+}
+.features .content h3 {
+  color: var(--main-color);
+  font-weight: 600;
+}
+.features .content p {
+  color: #444444;
+  font-family: var(--main-font);
+  padding-top: 10px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .features .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .features .image img {
+    width: 70%;
+  }
+}
+/* ..........................end features........................... */
+/* ..........................start F.A.Q........................... */
+.FAQ .row {
+  margin-top: 50px;
+}
+.FAQ .first-row {
+  padding-top: 40px !important;
+}
+.FAQ i {
+  color: #dee2e6;
+  font-size: 20px;
+  line-height: 0;
+  padding: 13px 0 0 0;
+  margin: 0;
+}
+.FAQ h4 {
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 0 0 10px 15px;
+  color: #444444 !important;
+}
+.FAQ p {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  font-size: 15px;
+}
+/* ..........................end F.A.Q.......................... */
+/* ..........................start pricing.......................... */
+.pricing .card {
+  background: #fff;
+  text-align: center;
+  box-shadow: 0px 0px 4px rgba(86, 85, 85, 0.12);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.pricing .card h3 {
+  padding: 20px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #777777;
+  background: #f8f8f8;
+}
+.pricing .card .Business {
+  color: #fff;
+  background: var(--main-color-btn);
+}
+.pricing h4 {
+  font-size: 36px;
+  color: var(--main-color-btn);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+.pricing h4 sup {
+  font-size: 20px;
+  top: -15px;
+  left: -3px;
+}
+.pricing h4 span {
+  color: #bababa;
+  font-size: 16px;
+  font-weight: 300;
+}
+.pricing ul {
+  padding: 0;
+  list-style: none;
+  color: #444444;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+.pricing ul li {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.pricing ul li del {
+  color: #bababa;
+}
+.pricing .card .buy-btn {
+  padding: 20px 15px;
+  background: #f8f8f8;
+  text-align: center;
+}
+.pricing .card .advanced-label {
+  background-color: var(--main-color-btn);
+  position: absolute;
+  transform: rotate(45deg);
+  right: -25px;
+  top: 20px;
+}
+.pricing .card .advanced-label span {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 25px;
+}
+/* ..........................end pricing.......................... */
