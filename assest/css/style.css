@@ -110,7 +110,7 @@ ul li .active {
 .landing {
   position: relative;
   min-height: 100vh;
-  background-image: url(/assest/img/slide-1.jpg);
+  background-image: url(../img/slide-1.jpg);
   background-size: cover;
   background-position: top center;
   z-index: 100;
